@@ -21,7 +21,7 @@ This project combines **data analytics** with **business strategy** to tackle cu
 
 ## CRITICAL BUSINESS INSIGHTS
 
-# There are some assumptions in the Python Code - 20% profit margin on services & assignment of tier on 50/100 margin (this is subject to change dependin on the preconditions).
+### (There are some assumptions in the Python Code - 20% profit margin on services & assignment of tier on 50/100 margin (this is subject to change dependin on the preconditions). ###
 
 ### The Revenue Crisis
 - **30.5% of monthly revenue** is lost to churn ($139,130 monthly)
