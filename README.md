@@ -16,15 +16,14 @@ This project combines **data analytics** with **business strategy** to tackle cu
 - **Algorithm**: LightGBM for efficient churn prediction
 - **Performance**: ROC-AUC score: 0.8417 ; Accuracy 0.7984
 - **Feature Importance**: Identified key drivers of churn - 
-- **Production Ready**: Model optimized for real-time scoring in business applications
 
 ---
 
 ## CRITICAL BUSINESS INSIGHTS
 
-# There are some assumptions in the Python Code - 20% profit margin on services & assignment of tier on 50/100 margin (this is subject to change dependin on the preconditions.
+# There are some assumptions in the Python Code - 20% profit margin on services & assignment of tier on 50/100 margin (this is subject to change dependin on the preconditions).
 
-### The Revenue Emergency
+### The Revenue Crisis
 - **30.5% of monthly revenue** is lost to churn ($139,130 monthly)
 - **High-value customers** are leaving at 28% rate - double the acceptable threshold
 - **253 high-value customers** at immediate risk of churn
