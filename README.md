@@ -8,7 +8,7 @@ This project combines **data analytics** with **business strategy** to tackle cu
 
 ### Python EDA & Analysis
 - **Data Exploration**: Comprehensive analysis of 7,043 customer records with 21 features
-- **Profit-Centric KPIs**: Developed financial metrics focusing on revenue impact and customer lifetime value
+- **Business KPIs**: Developed financial metrics focusing on revenue impact and customer lifetime value
 - **Customer Segmentation**: Created value tiers, tenure segments, and risk categories
 - **Visual Analytics**: Interactive dashboards for stakeholder communication
 
