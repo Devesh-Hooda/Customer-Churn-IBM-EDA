@@ -97,7 +97,7 @@ Intervention Triggers:
 ---
 
 ***FINAL TAKEAWAY***
-- *The business decisions are based on the EDA mostly and the ML is my own attempt at using LightGBM, the decisions made are mostly to retain the most impactful section of the revenue generation stream (High Value customers) while also keeping the broader scope of development and incentivising customers to be associated with the company for longer durations since those show promise in terms of retention. 
+- The business decisions are based on the EDA mostly and the ML is my own attempt at using LightGBM, the decisions made are mostly to retain the most impactful section of the revenue generation stream (High Value customers) while also keeping the broader scope of development and incentivising customers to be associated with the company for longer durations since those show promise in terms of retention. 
 
 
 
