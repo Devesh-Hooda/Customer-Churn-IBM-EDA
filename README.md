@@ -8,14 +8,34 @@ This project combines **data analytics** with **business strategy** to tackle cu
 
 ### Python EDA & Analysis
 - **Data Exploration**: Comprehensive analysis of 7,043 customer records with 21 features
+- **Funnel Analysis**: Advanced customer retention funnel visualization revealing critical drop-off points across the customer journey (New → Engaged → Loyal → Retained)
 - **Business KPIs**: Developed financial metrics focusing on revenue impact and customer lifetime value
 - **Customer Segmentation**: Created value tiers, tenure segments, and risk categories
 - **Visual Analytics**: Interactive dashboards for stakeholder communication
+- **Environment Setup**: Virtual environment with requirements.txt for reproducible analysis
 
 ### Machine Learning Model
-- **Algorithm**: LightGBM for efficient churn prediction
-- **Performance**: ROC-AUC score: 0.8417 ; Accuracy 0.7984
-- **Feature Importance**: Identified key drivers of churn - 
+
+#### Logistic Regression Model (`logistic_regression_model.py`)
+- **Algorithm**: Logistic Regression with L2 regularization for interpretable churn prediction
+- **Performance Metrics**:
+  - ROC-AUC Score: 0.8403 (excellent discriminatory power)
+  - Accuracy: 79.9%
+  - Precision (Churn): 64.3%
+  - Recall (Churn): 54.8%
+  - F1-Score (Churn): 59.2%
+
+- **Top Predictors of Churn** (Feature Importance Ranking):
+  1. **Tenure** - Longer customer tenure significantly reduces churn risk
+  2. **MonthlyCharges** - Higher monthly charges increase churn probability
+  3. **Contract** - Contract type is a major churn driver (month-to-month contracts)
+  4. **TotalCharges** - Cumulative charges paid by customer
+  5. **PhoneService** - Whether customer has phone service
+  6. **OnlineSecurity** - Security service subscription status
+  7. **TechSupport** - Technical support service status
+  8. **PaperlessBilling** - Billing method preference
+  9. **InternetService** - Internet service type
+  10. **OnlineBackup** - Backup service subscription
 
 ---
 
@@ -94,13 +114,33 @@ Intervention Triggers:
 ```
 **Goal**: Reduction in overall churn
 
+#### 6. **Logistic Regression Model Insights & Actions**
+```python
+# MODEL VALIDATION: Logistic Regression confirms key churn drivers
+# CONFIDENCE LEVEL: High (ROC-AUC: 84.0%, Accuracy: 79.9%)
+
+Priority Actions Based on ML Insights:
+• **Tenure Building**: Reward customer loyalty milestones (6, 12, 24 months)
+• **Contract Conversion**: Target month-to-month customers with personalized offers
+• **Service Optimization**: Promote OnlineSecurity and TechSupport adoption
+• **Price Sensitivity Management**: Monitor MonthlyCharges impact on churn risk
+• **Paperless Billing Incentives**: Encourage electronic billing adoption
+```
+**Goal**: Data-driven retention strategies validated by ML model
+
 ---
 
 ***FINAL TAKEAWAY***
-- The business decisions are based on the EDA mostly and the ML is my own attempt at using LightGBM, the decisions made are mostly to retain the most impactful section of the revenue generation stream (High Value customers) while also keeping the broader scope of development and incentivising customers to be associated with the company for longer durations since those show promise in terms of retention. 
+- This comprehensive analysis combines EDA-driven insights with ML-powered predictions to create a data-driven churn reduction strategy
+- **Logistic Regression Model** provides interpretable insights (79.9% accuracy, 84.0% ROC-AUC) identifying tenure, contract type, and monthly charges as key churn drivers
+- Business decisions prioritize high-value customer retention while building long-term loyalty through service optimization and contract stabilization
+- The integrated approach ensures both strategic understanding and operational execution for sustainable customer retention
 
-
-
+## Project Files
+- `IBM_Churn_EDA.py`: Comprehensive exploratory data analysis script with KPI calculations and visualizations
+- `logistic_regression_model.py`: Logistic regression model for churn prediction with detailed evaluation and business insights
+- `funnel_analysis.py`: Custom customer retention funnel analysis with advanced visualizations
+- `requirements.txt`: Python dependencies for reproducible environment setup
+- `README.md`: Comprehensive project documentation with business insights and action plans
 
 ---
-
