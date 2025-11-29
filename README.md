@@ -8,7 +8,7 @@ This project combines **data analytics** with **business strategy** to tackle cu
 
 ### Python EDA & Analysis
 - **Data Exploration**: Comprehensive analysis of 7,043 customer records with 21 features
-- **Funnel Analysis**: Advanced customer retention funnel visualization revealing critical drop-off points across the customer journey (New → Engaged → Loyal → Retained)
+- **Funnel Analysis** (`funnel_analysis.py`): Advanced customer retention funnel with 5-stage journey analysis (Total → Internet Service → Premium Services → Long Tenure → Retained), conversion rate calculations, drop-off analysis, and churn rate segmentation by funnel stage
 - **Business KPIs**: Developed financial metrics focusing on revenue impact and customer lifetime value
 - **Customer Segmentation**: Created value tiers, tenure segments, and risk categories
 - **Visual Analytics**: Interactive dashboards for stakeholder communication
