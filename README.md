@@ -1,150 +1,102 @@
-# Telco Customer Churn Analysis 
+# Telco Customer Churn Analysis
 
 ## Project Overview
+This project creates a data analytics story from customer churn analysis and builds a Tableau dashboard to visualize key insights. Combining Python-based exploratory data analysis (EDA) with machine learning predictions, the project translates data insights into actionable business strategies for revenue protection and growth.
 
-This project combines **data analytics** with **business strategy** to tackle customer churn in the telecommunications industry. While technical analysis forms the foundation, the primary focus is on translating data insights into actionable business decisions that protect revenue and drive growth.
+## Data Analytics Story: The Churn Crisis Narrative
 
-## Technical Implementation 
+### Act 1: Setting the Scene
+A telecommunications company faces a **26.5% customer churn rate** across 7,043 customers, representing a **$139,130 monthly revenue loss**. The story examines who is leaving, why, and the financial impact.
 
-### Python EDA & Analysis
-- **Data Exploration**: Comprehensive analysis of 7,043 customer records with 21 features
-- **Funnel Analysis** (`funnel_analysis.py`): Advanced customer retention funnel with 5-stage journey analysis (Total → Internet Service → Premium Services → Long Tenure → Retained), conversion rate calculations, drop-off analysis, and churn rate segmentation by funnel stage
-- **Business KPIs**: Developed financial metrics focusing on revenue impact and customer lifetime value
-- **Customer Segmentation**: Created value tiers, tenure segments, and risk categories
-- **Visual Analytics**: Interactive dashboards for stakeholder communication
-- **Environment Setup**: Virtual environment with requirements.txt for reproducible analysis
+### Act 2: Character Development
+Customers are segmented by value and tenure: Low-value (≤$50/month), Medium-value ($50-$100), High-value (>$100). Loyal customers (37+ months) prove most profitable, generating **47.4% of total profits**.
 
-### Machine Learning Model
+### Act 3: The Conflict
+Key churn drivers emerge: month-to-month contracts, high monthly charges, and short tenure. Logistic regression model (84.0% ROC-AUC) identifies tenure as the strongest predictor.
 
-#### Logistic Regression Model (`logistic_regression_model.py`)
-- **Algorithm**: Logistic Regression with L2 regularization for interpretable churn prediction
-- **Performance Metrics**:
-  - ROC-AUC Score: 0.8403 (excellent discriminatory power)
-  - Accuracy: 79.9%
-  - Precision (Churn): 64.3%
-  - Recall (Churn): 54.8%
-  - F1-Score (Churn): 59.2%
+### Act 4: Resolution
+Strategic interventions focus on early retention, contract upgrades, and premium service adoption to reduce churn and protect revenue.
 
-- **Top Predictors of Churn** (Feature Importance Ranking):
-  1. **Tenure** - Longer customer tenure significantly reduces churn risk
-  2. **MonthlyCharges** - Higher monthly charges increase churn probability
-  3. **Contract** - Contract type is a major churn driver (month-to-month contracts)
-  4. **TotalCharges** - Cumulative charges paid by customer
-  5. **PhoneService** - Whether customer has phone service
-  6. **OnlineSecurity** - Security service subscription status
-  7. **TechSupport** - Technical support service status
-  8. **PaperlessBilling** - Billing method preference
-  9. **InternetService** - Internet service type
-  10. **OnlineBackup** - Backup service subscription
+## Churn Overview
 
----
+### Python Insights
+- Dataset: 7,043 customers, 21 features
+- Churn rate: 26.5% (1,869 churned vs 5,174 retained)
+- Average tenure: 32.4 months
+- Average CLV: $2,280 (calculated from TotalCharges)
 
-## CRITICAL BUSINESS INSIGHTS
+### Tableau Insights
+- Pie chart shows 26.54% churn vs 73.46% retention
+- KPI cards display total customers (7,043), average tenure (32.37 months), average CLV ($4,400)
+- Business insight: 1 in 4 customers churn, highlighting scale of retention opportunity
 
-### (There are some assumptions in the Python Code - 20% profit margin on services & assignment of tier on 50/100 margin (this is subject to change dependin on the preconditions). ###
+## Revenue Impact Analysis
 
-### The Revenue Crisis
-- **30.5% of monthly revenue** is lost to churn ($139,130 monthly)
-- **High-value customers** are leaving at 28% rate - double the acceptable threshold
-- **253 high-value customers** at immediate risk of churn
-- **$2.86 million** in customer lifetime value currently at risk
+### Python Insights
+- Monthly revenue loss: $139,130 (30.5% of total MRR)
+- CLV at risk: $2.86 million from churned customers
+- High-value customers (>$100/month) churn at 28% rate
+- Loyal customers generate $43,219 monthly profit
 
-### The Profit Opportunity
-- **Loyal customers** (37+ months) generate **47.4% of total profit** ($43,219 monthly)
-- **Premium services** show strong profitability:
-  - Device Protection: $16.96 monthly profit per customer
-  - Online Backup: $16.62 monthly profit per customer  
-  - Online Security: $15.77 monthly profit per customer
+### Tableau Insights
+- Horizontal bar chart compares MRR: Retained ($351K+) vs Churned ($139K)
+- Revenue retained significantly outweighs revenue lost
+- Business insight: Churn is a revenue leakage problem requiring immediate attention
 
-## Tableau Dashboard with File in REPO
+## Key Churn Drivers
+
+### Python Insights
+- Top predictors: Tenure, MonthlyCharges, Contract type
+- Month-to-month contracts drive 60% of churn
+- Churn probability decreases with tenure (logistic regression)
+- Premium services correlate with lower churn rates
+
+### Tableau Insights
+- Stacked bar chart: Month-to-month (highest churn), 1-year (moderate), 2-year (lowest)
+- Line chart: Churn probability drops from 54% (0-6 months) to minimal after 5 years
+- Business insight: First 6-12 months critical retention window; contract length major lever
+
+## Final Dashboard
 
 ![](https://github.com/Devesh-Hooda/Customer-Churn-IBM-EDA/blob/main/Tableau_workbook/Churn%20Dashboard.png)
 
-## BUSINESS DECISIONS & ACTION PLAN
+## Business Recommendations
 
-#### 1. **High-Value Customer Retention**
-```python
-Actions:
-✓ Senior executive personal outreach to top 50 customers
-✓ Custom retention offers: 15-20% discount for 6-month commitment
-✓ Priority service routing and dedicated support lines
-✓ Monthly business reviews for enterprise accounts
-```
+### Python-Based Actions
+- High-value customer retention: Executive outreach, custom discounts (15-20% off)
+- Service monetization: Bundle premium services (OnlineSecurity + DeviceProtection) at 20% discount
+- Contract conversion: 10-15% discounts for 1-2 year commitments
+- Predictive deployment: ML-driven intervention triggers (30%+ probability → email, 50%+ → phone call)
 
-#### 2. **Service Monetization Acceleration**
-```python
-# FOCUS: Premium service adoption
-# STRATEGY: Bundle pricing and targeted upsells
+### Tableau-Supported Strategies
+- Early engagement focus: Target customers in first year with onboarding support
+- Contract incentives: Aggressive month-to-month to annual conversions
+- Revenue protection: Prioritize low-tenure, high-value segments
+- Visual monitoring: Use dashboard for ongoing churn tracking and intervention
 
-Launch Immediately:
-• "Essential Security Bundle" (OnlineSecurity + DeviceProtection) - 20% off
-• "Complete Protection Suite" (All 3 premium services) - 25% off  
-• Sales team incentives: Double commission on premium service sales
-```
-**Target**: Increase services per customer from 2.1 to 2.8 (Metric found from EDA code)
+## Technical Implementation
 
-#### 3. **Contract Stabilization Initiative**
-```python
-# PROBLEM: Month-to-month contracts driving 60% of churn
-# SOLUTION: Aggressive conversion to annual contracts
+### Python Components
+- `IBM_Churn_EDA.py`: EDA with KPI calculations, customer segmentation, profit analysis
+- `logistic_regression_model.py`: Churn prediction model (79.9% accuracy, 84.0% ROC-AUC)
+- `funnel_analysis.py`: Customer retention funnel visualization
+- Assumptions: 20% profit margin on services, tier thresholds ($50/$100 monthly charges)
 
-Incentive Structure:
-• 10% discount for 1-year contracts
-• 15% discount for 2-year contracts  
-• $50 bonus for sales team per conversion
-```
-**Goal**: Convert targeted month-to-month customers into Year(s) contraact
+### Tableau Components
+- Interactive dashboard with 4 key visualizations (pie, bars, line charts)
+- Workbook file: `Tableau_workbook/ChurnFinal.twbx`
+- Dashboard image: `Tableau_workbook/Churn Dashboard.png`
+- Focus: Visual storytelling of churn patterns and business impact
 
-#### 4. **Payment Method Optimization**
-```python
-FINDING: Electronic check users have 45% higher churn risk
-
-Auto-Pay Transformation:
-• $5 monthly discount for credit card auto-pay
-• $8 monthly discount for bank auto-pay  
-• One-time $25 bonus for switching to auto-pay
-```
-**Goal**: Reduce electronic check usage 
-
-#### 5. **Predictive Retention Deployment**
-```python
-# DEPLOY: ML-driven early warning system
-# RESOURCES: 3 FTE retention team + CRM integration
-
-Intervention Triggers:
-• 30%+ churn probability → Automated email campaign
-• 50%+ churn probability → Personal phone outreach
-• 70%+ churn probability → Manager escalation + special offer
-```
-**Goal**: Reduction in overall churn
-
-#### 6. **Logistic Regression Model Insights & Actions**
-```python
-# MODEL VALIDATION: Logistic Regression confirms key churn drivers
-# CONFIDENCE LEVEL: High (ROC-AUC: 84.0%, Accuracy: 79.9%)
-
-Priority Actions Based on ML Insights:
-• **Tenure Building**: Reward customer loyalty milestones (6, 12, 24 months)
-• **Contract Conversion**: Target month-to-month customers with personalized offers
-• **Service Optimization**: Promote OnlineSecurity and TechSupport adoption
-• **Price Sensitivity Management**: Monitor MonthlyCharges impact on churn risk
-• **Paperless Billing Incentives**: Encourage electronic billing adoption
-```
-**Goal**: Data-driven retention strategies validated by ML model
-
----
-
-***FINAL TAKEAWAY***
-- This comprehensive analysis combines EDA-driven insights with ML-powered predictions to create a data-driven churn reduction strategy
-- **Logistic Regression Model** provides interpretable insights (79.9% accuracy, 84.0% ROC-AUC) identifying tenure, contract type, and monthly charges as key churn drivers
-- Business decisions prioritize high-value customer retention while building long-term loyalty through service optimization and contract stabilization
-- The integrated approach ensures both strategic understanding and operational execution for sustainable customer retention
+## Final Takeaway
+This integrated approach combines Python's analytical depth with Tableau's visual clarity to create a compelling churn reduction strategy. The data story reveals that early intervention, contract stability, and premium service adoption are key to protecting revenue and building customer loyalty.
 
 ## Project Files
-- `IBM_Churn_EDA.py`: Comprehensive exploratory data analysis script with KPI calculations and visualizations
-- `logistic_regression_model.py`: Logistic regression model for churn prediction with detailed evaluation and business insights
-- `funnel_analysis.py`: Custom customer retention funnel analysis with advanced visualizations
-- `requirements.txt`: Python dependencies for reproducible environment setup
-- `README.md`: Comprehensive project documentation with business insights and action plans
-
----
+- `IBM_Churn_EDA.py`: Python EDA script
+- `logistic_regression_model.py`: ML prediction model
+- `funnel_analysis.py`: Funnel analysis script
+- `requirements.txt`: Python dependencies
+- `Tableau_workbook/Churn Dashboard.png`: Dashboard screenshot
+- `Tableau_workbook/ChurnFinal.twbx`: Interactive Tableau workbook
+- `README.md`: Project documentation
+- **Key Business Insight**: First 6-12 months represent the critical retention window.
