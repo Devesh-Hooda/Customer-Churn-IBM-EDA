@@ -5,16 +5,16 @@ This project creates a data analytics story from customer churn analysis and bui
 
 ## Data Analytics Story: The Churn Crisis Narrative
 
-### Act 1: Setting the Scene
+### Phase 1: Setting the Scene
 A telecommunications company faces a **26.5% customer churn rate** across 7,043 customers, representing a **$139,130 monthly revenue loss**. The story examines who is leaving, why, and the financial impact.
 
-### Act 2: Character Development
+### Phase 2: Character Development
 Customers are segmented by value and tenure: Low-value (≤$50/month), Medium-value ($50-$100), High-value (>$100). Loyal customers (37+ months) prove most profitable, generating **47.4% of total profits**.
 
-### Act 3: The Conflict
+### Phase 3: The Conflict
 Key churn drivers emerge: month-to-month contracts, high monthly charges, and short tenure. Logistic regression model (84.0% ROC-AUC) identifies tenure as the strongest predictor.
 
-### Act 4: Resolution
+### Phase 4: Resolution
 Strategic interventions focus on early retention, contract upgrades, and premium service adoption to reduce churn and protect revenue.
 
 ## Churn Overview
