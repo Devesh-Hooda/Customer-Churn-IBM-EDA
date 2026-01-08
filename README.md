@@ -56,6 +56,10 @@ This project combines **data analytics** with **business strategy** to tackle cu
   - Online Backup: $16.62 monthly profit per customer  
   - Online Security: $15.77 monthly profit per customer
 
+## Tableau Dashboard with File in REPO
+
+![](https://github.com/Devesh-Hooda/Customer-Churn-IBM-EDA/blob/main/Tableau_workbook/Churn%20Dashboard.png)
+
 ## BUSINESS DECISIONS & ACTION PLAN
 
 #### 1. **High-Value Customer Retention**
